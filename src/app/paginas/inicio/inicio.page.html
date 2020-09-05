@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+    <h1>ParkApp</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-row class="top-20">
+        <ion-col>
+          <ion-button expand="full" routerLink="/shopping-arena">
+            <ion-icon slot="start" name="card"></ion-icon>
+            Shopping Arena
+          </ion-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-button expand="full" routerLink="/shopping-zuni">
+            <ion-icon slot="start" name="card"></ion-icon>
+            Shopping Zuni
+          </ion-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-button expand="full" routerLink="/estapublic">
+            <ion-icon slot="start" name="car-sport"></ion-icon>
+            Estacionamiento público
+          </ion-button>
+        </ion-col>
+        
+      
+  <ion-button  style="position: absolute; bottom:120px; width: 100%" routerLink="/opciones">
+            <ion-icon name="options"></ion-icon>
+            Opciones
+          </ion-button>
+      
+
+  <ion-button  (click)="Onlogout()" style="position: absolute; bottom:75px; width: 100%" color=secondary>Desconectarse</ion-button>
+
+  <div style="position: absolute; bottom: 0px; width: 100%">
+    <div style="text-align: center">
+      <p>Ingenieria de Sistemas</p>
+      <p>Facultad Politécnica - UNE</p>
+    </div>
+  </div>
+
+  </ion-row>
+
+    
+
+</ion-content>
+
+<!-- 
+    
+      -->

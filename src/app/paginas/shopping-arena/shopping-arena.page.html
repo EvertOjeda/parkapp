@@ -1,0 +1,44 @@
+<app-header titulo="Arena"></app-header>
+
+<ion-content>
+    <ion-card mode="ios" color="primary">
+        <ion-card-header>
+            <ion-card-subtitle>En Ciudad del Este</ion-card-subtitle>
+            <ion-card-title>Shopping Arena</ion-card-title>
+        </ion-card-header>
+
+    </ion-card>
+
+    <IonList>
+        <ion-item *ngFor = "let estaarena of estaarena">
+          <ion-avatar slot="start">
+             <ion-img [src]="estaarena.img"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h2> <b> {{estaarena.name}} </b> </h2>
+             <p>{{estaarena.descripcion}}</p>
+          </ion-label>
+          <ion-icon name="navigate" routerLink="{{estaarena.maps}}"></ion-icon>
+        </ion-item>
+     </IonList>
+
+   <!--  <ion-item color="primary">
+        <ion-icon color="light" slot="start" name="pin"></ion-icon>
+        <ion-label>Visitar!</ion-label>
+    </ion-item>
+   -->
+
+    <ion-card-content>
+        Centro comercial localizado en Ciudad del Este con mejores tiendas, 
+        plaza de alimentación y entretenimientos. 
+    </ion-card-content>
+
+    <ion-card>
+        <ion-img src="/assets/shoppingarena.jpg"></ion-img>
+    </ion-card>
+
+    <ion-card-content>
+        Creado por Alumnos de Ingenieria de Sistemas - FPUNE.
+    </ion-card-content>
+    
+</ion-content>

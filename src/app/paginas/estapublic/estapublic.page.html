@@ -1,0 +1,43 @@
+<app-header titulo="Publicos"></app-header>
+
+<ion-content>
+    <ion-card mode="ios" color="primary">
+        <ion-card-header>
+            <ion-card-subtitle>Lugares públicos</ion-card-subtitle>
+            <ion-card-title>en Ciudad del Este</ion-card-title>
+        </ion-card-header>
+
+    </ion-card>
+
+    <ion-card-content>
+      Ciudad del Este cuenta con varios espacios públicos para el estacionamiento de vehiculos. 
+  </ion-card-content>
+
+  <ion-card>
+      <ion-img src="/assets/ciudaddeleste.jpg"></ion-img>
+  </ion-card>
+
+   <IonList>
+     <ion-item *ngFor = "let estapublic of estapublic">
+       <ion-avatar slot="start">
+          <ion-img [src]="estapublic.img"></ion-img>
+       </ion-avatar>
+       <ion-label>
+         <h2> <b> {{estapublic.name}} </b> </h2>
+          <p>{{estapublic.descripcion}}</p>
+       </ion-label>
+       <ion-icon name="navigate" routerLink="{{estapublic.maps}}"></ion-icon>
+     </ion-item>
+  </IonList>
+
+   <!--  <ion-item color="primary">
+        <ion-icon color="light" slot="start" name="pin"></ion-icon>
+        <ion-label>Visitar!</ion-label>
+    </ion-item>
+   -->
+
+    <ion-card-content>
+        Creado por Alumnos de Ingenieria de Sistemas - FPUNE.
+    </ion-card-content>
+    
+</ion-content>

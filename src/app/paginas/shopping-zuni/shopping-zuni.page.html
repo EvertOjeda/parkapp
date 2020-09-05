@@ -1,0 +1,44 @@
+<app-header titulo="Zuni"></app-header>
+
+<ion-content>
+    <ion-card mode="ios" color="primary">
+        <ion-card-header>
+            <ion-card-subtitle>En Ciudad del Este</ion-card-subtitle>
+            <ion-card-title>Shopping Zuni</ion-card-title>
+        </ion-card-header>
+
+    </ion-card>
+
+    <IonList>
+     <ion-item *ngFor = "let estazuni of estazuni">
+       <ion-avatar slot="start">
+          <ion-img [src]="estazuni.img"></ion-img>
+       </ion-avatar>
+       <ion-label>
+         <h2> <b> {{estazuni.name}} </b> </h2>
+          <p>{{estazuni.descripcion}}</p>
+       </ion-label>
+       <ion-icon name="navigate" routerLink="{{estapublic.maps}}"></ion-icon>
+     </ion-item>
+  </IonList>
+
+   <!--  <ion-item color="primary">
+        <ion-icon color="light" slot="start" name="pin"></ion-icon>
+        <ion-label>Visitar!</ion-label>
+    </ion-item>
+   -->
+
+    <ion-card-content>
+        Centro comercial localizado en Km 1 de Ciudad del Este con tiendas, 
+        plaza de juegos, tienda de ropas y entretenimiento. 
+    </ion-card-content>
+
+    <ion-card>
+        <ion-img src="/assets/shoppingzuni.jpg"></ion-img>
+    </ion-card>
+
+    <ion-card-content>
+        Creado por Alumnos de Ingenieria de Sistemas - FPUNE.
+    </ion-card-content>
+    
+</ion-content>
