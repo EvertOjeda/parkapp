@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentesModule } from './componentes/componentes.module';
 
-import { firebaseconfig } from '../environments/environment';
+import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule, SETTINGS } from "@angular/fire/firestore";
@@ -20,7 +20,7 @@ import { AngularFirestoreModule, SETTINGS } from "@angular/fire/firestore";
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(firebaseconfig ),
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebase ),
     AngularFireAuthModule, AngularFirestoreModule, ComponentesModule],
   providers: [
   

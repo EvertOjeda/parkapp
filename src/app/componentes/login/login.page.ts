@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Firebase } from '@ionic-native/firebase/ngx';
+
+
 import { AuthService } from '../../servicios/auth.service';
 import { Router } from '@angular/router';
 
