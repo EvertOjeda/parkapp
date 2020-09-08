@@ -15,12 +15,20 @@
              <ion-img [src]="estaarena.img"></ion-img>
           </ion-avatar>
           <ion-label>
-            <h2> <b> {{estaarena.name}} </b> </h2>
-             <p>{{estaarena.descripcion}}</p>
+           <!--  <h2> <b> {{estaarena.name}} </b> </h2> -->
+             <h2>{{estaarena.descripcion}}</h2>
           </ion-label>
-          <ion-icon name="navigate" routerLink="{{estaarena.maps}}"></ion-icon>
+          <ion-button color="dark" fill="clear" size="large" (click)="myAction()" href="https://goo.gl/maps/VVegdgifHDpeBtud7">
+            <ion-icon name="navigate"></ion-icon>
+        </ion-button>
         </ion-item>
      </IonList>
+
+     <ion-button color="light" shape="full" (click)="myAction()" href="{{estaarena.maps}}">
+        <ion-icon name="navigate"></ion-icon> 
+        IR
+    </ion-button>
+
 
    <!--  <ion-item color="primary">
         <ion-icon color="light" slot="start" name="pin"></ion-icon>

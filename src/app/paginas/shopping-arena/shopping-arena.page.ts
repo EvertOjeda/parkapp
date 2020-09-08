@@ -15,11 +15,17 @@ export class ShoppingArenaPage implements OnInit {
 
   constructor(public estaarenaservice : EstaarenaService) { }
 
+  
+
   ngOnInit() {
     this.estaarenaservice.getEstapublic().subscribe(estaarena =>{
       
       this.estaarena = estaarena;
-    })
+      })
+  }
+
+  myAction() {
+  
   }
 
 }

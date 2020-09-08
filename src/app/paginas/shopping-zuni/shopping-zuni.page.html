@@ -15,12 +15,19 @@
           <ion-img [src]="estazuni.img"></ion-img>
        </ion-avatar>
        <ion-label>
-         <h2> <b> {{estazuni.name}} </b> </h2>
-          <p>{{estazuni.descripcion}}</p>
+         <!--  <h2> <b> {{estazuni.name}} </b> </h2> -->
+          <h2><b>{{estazuni.descripcion}}</b></h2>
        </ion-label>
-       <ion-icon name="navigate" routerLink="{{estapublic.maps}}"></ion-icon>
+       <ion-button color="dark" fill="clear" size="large" (click)="myAction()" href="https://goo.gl/maps/VrDd1RTTP5Ntf4a18" >
+            <ion-icon name="navigate"></ion-icon> 
+        </ion-button>
      </ion-item>
   </IonList>
+
+  <ion-button color="light" shape="full" (click)="myAction()" href="https://goo.gl/maps/VrDd1RTTP5Ntf4a18">
+      <ion-icon name="navigate"></ion-icon>
+      VISITAR
+  </ion-button>
 
    <!--  <ion-item color="primary">
         <ion-icon color="light" slot="start" name="pin"></ion-icon>
