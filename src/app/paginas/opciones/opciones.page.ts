@@ -8,18 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class OpcionesPage implements OnInit {
 
 
-  darkmode: boolean = true;
+  darkMode: boolean = true;
 
   constructor() { 
 
     const prefersDark = window.matchMedia('(prefers-color-scheme:dark)');
-    this.darkmode = prefersDark.matches;
+    this.darkMode = prefersDark.matches;
   }
 
   cambio() {
 
    // const prefersDark = window.matchMedia('(prefers-color-scheme:dark)');
-    this.darkmode = !this.darkmode;
+    this.darkMode = !this.darkMode;
 
       document.body.classList.toggle('dark');
   }
