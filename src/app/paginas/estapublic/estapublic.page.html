@@ -17,7 +17,9 @@
       <ion-img src="/assets/ciudaddeleste.jpg"></ion-img>
   </ion-card>
 
-   <IonList>
+   
+
+  
      <ion-item *ngFor = "let estapublic of estapublic">
        <ion-avatar slot="start">
           <ion-img [src]="estapublic.img"></ion-img>
@@ -28,7 +30,9 @@
        </ion-label>
        <ion-icon name="navigate" routerLink="{{estapublic.maps}}"></ion-icon>
      </ion-item>
-  </IonList>
+  
+
+
 
    <!--  <ion-item color="primary">
         <ion-icon color="light" slot="start" name="pin"></ion-icon>

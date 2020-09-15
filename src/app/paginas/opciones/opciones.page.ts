@@ -7,7 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OpcionesPage implements OnInit {
 
-  constructor() { }
+
+  darkmode: boolean = true;
+
+  constructor() { 
+
+    const prefersDark = window.matchMedia('(prefers-color-scheme:dark)');
+    this.darkmode = prefersDark.matches;
+  }
+
+  cambio() {
+
+   // const prefersDark = window.matchMedia('(prefers-color-scheme:dark)');
+    this.darkmode = !this.darkmode;
+
+      document.body.classList.toggle('dark');
+  }
 
   ngOnInit() {
   }
