@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+import { ThemeService } from 'src/app/servicios/theme.service';
+
+
+
 
 @Component({
   selector: 'app-opciones',
@@ -7,24 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OpcionesPage implements OnInit {
 
-
-  darkMode: boolean = true;
-
-  constructor() { 
-
-    const prefersDark = window.matchMedia('(prefers-color-scheme:dark)');
-    this.darkMode = prefersDark.matches;
-  }
-
-  cambio() {
-
-   // const prefersDark = window.matchMedia('(prefers-color-scheme:dark)');
-    this.darkMode = !this.darkMode;
-
-      document.body.classList.toggle('dark');
-  }
-
   ngOnInit() {
+  } 
+
+  constructor(private renderer: Renderer2) {
+     
   }
 
+  onToggleColorTheme(event) {
+    console.log(event.detail.checked);
+
+    if(event.detail.checked){
+      //document.body.setAttribute('color-theme', 'dark');
+      this.renderer.setAttribute(document.body, 'color-theme', 'dark')
+    }else{
+      //document.body.setAttribute('color-theme', 'light');
+
+      this.renderer.setAttribute(document.body, 'color-theme', 'light')
+    }
+  }
+ 
 }

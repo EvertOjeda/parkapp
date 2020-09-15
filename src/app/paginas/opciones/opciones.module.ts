@@ -9,13 +9,14 @@ import { OpcionesPageRoutingModule } from './opciones-routing.module';
 import { OpcionesPage } from './opciones.page';
 import { ComponentesModule } from 'src/app/componentes/componentes.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     OpcionesPageRoutingModule,
-    ComponentesModule
+    ComponentesModule,
   ],
   declarations: [OpcionesPage]
 })
