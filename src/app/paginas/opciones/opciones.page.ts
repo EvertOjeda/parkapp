@@ -11,12 +11,12 @@ const themes={
     dark: '#B89876'
   },
   night: {
-    primary: '#8CBA80',
-    secondary: '#FCFF6C',
-    tertiary: '#FE5F55',
-    medium: '#BCC2C7',
-    dark: '#F7F7FF',
-    light: '#495867'
+    primary: '#428cff',
+    secondary: '#50c8ff',
+    tertiary: '#6a64ff',
+    medium: '#989aa2',
+    dark: '#f4f5f8',
+    light: '#222428'
   },
   neon: {
     primary: '#39BFBD',
