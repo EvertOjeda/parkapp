@@ -43,4 +43,9 @@ register(email: string, password: string, name: string){
   })
  
 }
+
+
+resetPassword(email:string) {
+  return this.AFauth.sendPasswordResetEmail(email);
+}
 }

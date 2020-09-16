@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title class="ion-text-center">Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+
+  <form (submit)="sendLinkReset()">
+
+    <div class="ion-text-center">
+      <small>Escribe tu correo electrónico para recuperar la cuenta</small>
+    </div>
+  
+    <br>
+  
+    <ion-item>
+      
+      <ion-input type ="text" [(ngModel)]="email" placeholder="Ingrese su correo electrónico" name ="email"></ion-input>
+    </ion-item>
+  
+    <br>
+  
+    <ion-button class="ion-margin-top" type="submit" expand="block" color="tertiary">Enviar</ion-button>
+  
+
+  </form>
+
+<div style="position: absolute; bottom: 0px; width: 100%">
+  <div style="text-align: center">
+    <p align="center" routerLink="/login">O en cambio iniciar Sesión</p>
+  </div>
+</div>
+
+</ion-content>

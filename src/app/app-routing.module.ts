@@ -14,10 +14,6 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./componentes/login/login.module').then( m => m.LoginPageModule), canActivate:[NologinGuard]
   },
-  {
-    path: 'alert',
-    loadChildren: () => import('./paginas/alert/alert.module').then( m => m.AlertPageModule)
-  },
   
   {
     path: 'acercade',
@@ -42,6 +38,10 @@ const routes: Routes = [
   {
     path: 'registro',
     loadChildren: () => import('./componentes/registro/registro.module').then( m => m.RegistroPageModule), canActivate:[NologinGuard]
+  },
+  {
+    path: 'reset-pass',
+    loadChildren: () => import('./reset-pass/reset-pass.module').then( m => m.ResetPassPageModule)
   },
 ];
 
