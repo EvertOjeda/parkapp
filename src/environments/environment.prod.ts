@@ -10,3 +10,14 @@ export const environment = {
     appId: "1:1055828599063:web:3d60755b8472522f881752"
   }
 };
+
+
+export const snapshotToArray = snapshot => {
+  let returnArray = [];
+  snapshot.array.forEach(element => {
+    let item = element.val();
+    item.key = element.key;
+    returnArray.push(item)
+  });
+  return returnArray;
+}

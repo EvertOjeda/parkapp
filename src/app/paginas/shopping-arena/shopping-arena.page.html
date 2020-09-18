@@ -9,14 +9,24 @@
 
     </ion-card>
 
+
+            <ion-input [(ngModel)]="inputText" placeholder="Item name"></ion-input>
+            <ion-button full (click)="addItem({name:inputText})"> ADD</ion-button>
+
+            <ion-item *ngFor="let item of items">
+                {{item.name}}
+            </ion-item>
+
+            
     
         <ion-item *ngFor = "let estaarena of estaarena">
           <ion-avatar slot="start">
              <ion-img [src]="estaarena.img"></ion-img>
           </ion-avatar>
           <ion-label>
-           <!--  <h2> <b> {{estaarena.name}} </b> </h2> -->
+        
              <h2>{{estaarena.descripcion}}</h2>
+
           </ion-label>
           <ion-button color="dark" fill="clear" size="large" (click)="myAction()" href="https://goo.gl/maps/VVegdgifHDpeBtud7">
             <ion-icon name="navigate"></ion-icon>
