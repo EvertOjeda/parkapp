@@ -8,32 +8,37 @@
         </ion-card-header>
 
     </ion-card>
-
-
-            <ion-input [(ngModel)]="inputText" placeholder="Item name"></ion-input>
-            <ion-button full (click)="addItem({name:inputText})"> ADD</ion-button>
-
-            <ion-item *ngFor="let item of items">
-                {{item.name}}
-            </ion-item>
-
             
-    
-        <ion-item *ngFor = "let estaarena of estaarena">
-          <ion-avatar slot="start">
-             <ion-img [src]="estaarena.img"></ion-img>
-          </ion-avatar>
-          <ion-label>
-        
-             <h2>{{estaarena.descripcion}}</h2>
+        <ion-item *ngFor = "">
 
+            <ion-label>
+                <h2> {{libre.value}} </h2>
+            </ion-label>
+
+        </ion-item>
+
+
+
+
+        <!--Item para mostrar contenido firestore de arena-->
+
+        <ion-item *ngFor = "let estaarena of estaarena">
+
+                <ion-avatar slot="start">
+                    <ion-img [src]="estaarena.img"></ion-img>
+                </ion-avatar> 
+
+          <ion-label>
+           <!--  <h2> <b> {{estaarena.name}} </b> </h2> -->
+             
+                <h2>{{estaarena.descripcion}}</h2>
           </ion-label>
+
           <ion-button color="dark" fill="clear" size="large" (click)="myAction()" href="https://goo.gl/maps/VVegdgifHDpeBtud7">
             <ion-icon name="navigate"></ion-icon>
-        </ion-button>
-        </ion-item>
-     
+          </ion-button>
 
+        </ion-item>
      
 
 
@@ -42,6 +47,7 @@
         <ion-label>Visitar!</ion-label>
     </ion-item>
    -->
+
 
     <ion-card-content>
         Centro comercial localizado en Ciudad del Este con mejores tiendas, 
@@ -52,8 +58,12 @@
         <ion-img src="/assets/shoppingarena.jpg"></ion-img>
     </ion-card>
 
+
     <ion-card-content>
         Creado por Alumnos de Ingenieria de Sistemas - FPUNE.
+
+        {{homePage}}
     </ion-card-content>
+    
     
 </ion-content>
