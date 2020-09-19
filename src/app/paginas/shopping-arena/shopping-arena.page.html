@@ -9,7 +9,10 @@
 
     </ion-card>
             
-        <ion-item *ngFor = "">
+
+
+        <ion-item *ngFor = "let value of libre">
+
 
             <ion-label>
                 <h2> {{libre.value}} </h2>
@@ -30,8 +33,7 @@
 
           <ion-label>
            <!--  <h2> <b> {{estaarena.name}} </b> </h2> -->
-             
-                <h2>{{estaarena.descripcion}}</h2>
+                    <h2>{{estaarena.descripcion}}</h2>
           </ion-label>
 
           <ion-button color="dark" fill="clear" size="large" (click)="myAction()" href="https://goo.gl/maps/VVegdgifHDpeBtud7">
