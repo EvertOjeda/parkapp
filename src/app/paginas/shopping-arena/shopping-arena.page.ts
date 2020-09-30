@@ -29,7 +29,6 @@ export class ShoppingArenaPage implements OnInit {
   valuefinal
 
 
-  values: object[] = [];
 
   constructor(public estaarenaservice : EstaarenaService, private db: AngularFireDatabase) { }
 
@@ -40,15 +39,20 @@ export class ShoppingArenaPage implements OnInit {
             this.estaarenaservice.getEstapublic().subscribe(estaarena =>{
             this.estaarena = estaarena;})
 
+
             //para realtime database
               this.itemRef = this.db.object('libre');
                 this.itemRef.snapshotChanges().subscribe(action=> {
               
-
-                this.valuecrud =  JSON.stringify(action.payload.val(),['value']);
+                    //Transformacion del object a otro object mas simple
+                  this.valuecrud =  JSON.stringify(action.payload.val(),['value']);
                   
+                    //Objeto simple formato {"value":95}
                   this.valueobject = JSON.parse(this.valuecrud)
+
+                    //Extraccion del valor numerico del objeto asignando a la variable final
                   this.valuefinal = this.valueobject.value;
+
 
                   console.log(this.valuecrud);
                   console.log(this.valueobject);

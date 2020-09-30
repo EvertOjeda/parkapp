@@ -8,17 +8,6 @@
         </ion-card-header>
 
     </ion-card>
-            
-        <ion-item *ngFor = "">
-
-            <ion-label>
-                <h2> {{libre.value}} </h2>
-            </ion-label>
-
-        </ion-item>
-
-
-
 
         <!--Item para mostrar contenido firestore de arena-->
 
@@ -31,7 +20,7 @@
           <ion-label>
            <!--  <h2> <b> {{estaarena.name}} </b> </h2> -->
             <!--    <h2>{{estaarena.descripcion}}</h2>  -->
-                <h2>Lugares disponibles: {{valuefinal}} </h2>
+                <h2> <b> Lugares disponibles: {{valuefinal}} </b> </h2>
           </ion-label>
 
           <ion-button color="dark" fill="clear" size="large" (click)="myAction()" href="https://goo.gl/maps/VVegdgifHDpeBtud7">
