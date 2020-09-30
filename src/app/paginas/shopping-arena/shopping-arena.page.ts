@@ -23,6 +23,13 @@ export class ShoppingArenaPage implements OnInit {
  //vm.libres : [];
 
   public estaarena : any = [];
+  s;
+  
+  p
+  z
+
+
+  values: object[] = [];
 
   constructor(public estaarenaservice : EstaarenaService, private db: AngularFireDatabase) { }
 
@@ -37,15 +44,23 @@ export class ShoppingArenaPage implements OnInit {
               this.itemRef = this.db.object('libre');
                 this.itemRef.snapshotChanges().subscribe(action=> {
               
-                  this.homePage =  action.payload.val();
+
+                  this.s =  JSON.stringify(action.payload.val(),['value']);
+                  
+                  this.p = JSON.parse(this.s)
+                 this.z = this.p.value;
+
+                  console.log(this.s);
+                  console.log(this.p);
+                  console.log(this.z);
 
                   console.log(action.payload.val());
                   console.log(action);
-
-                  console.log("a",this.homePage);
                 
-                  this.homePage = Object.prototype.toString.call(action.payload.val)
+                
                 })
+
+        
 
           }
 
