@@ -23,10 +23,10 @@ export class ShoppingArenaPage implements OnInit {
  //vm.libres : [];
 
   public estaarena : any = [];
-  s;
   
-  p
-  z
+  valuecrud
+  valueobject
+  valuefinal
 
 
   values: object[] = [];
@@ -45,14 +45,14 @@ export class ShoppingArenaPage implements OnInit {
                 this.itemRef.snapshotChanges().subscribe(action=> {
               
 
-                  this.s =  JSON.stringify(action.payload.val(),['value']);
+                this.valuecrud =  JSON.stringify(action.payload.val(),['value']);
                   
-                  this.p = JSON.parse(this.s)
-                 this.z = this.p.value;
+                  this.valueobject = JSON.parse(this.valuecrud)
+                  this.valuefinal = this.valueobject.value;
 
-                  console.log(this.s);
-                  console.log(this.p);
-                  console.log(this.z);
+                  console.log(this.valuecrud);
+                  console.log(this.valueobject);
+                  console.log(this.valuefinal);
 
                   console.log(action.payload.val());
                   console.log(action);
