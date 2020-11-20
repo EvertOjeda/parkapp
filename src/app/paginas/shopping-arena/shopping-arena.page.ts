@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { EstaarenaService, estaarena } from '../../servicios/estaarena.service';
-import { NavController } from "@ionic/angular";
+import { AngularFireDatabase } from '@angular/fire/database';
 
-import * as firebase from 'firebase';
-import { snapshotToArray } from "../../../environments/environment";
+import { EstaarenaService, estaarena } from '../../servicios/estaarena.service';
+
+
 
 
 @Component({
@@ -11,39 +11,46 @@ import { snapshotToArray } from "../../../environments/environment";
   templateUrl: './shopping-arena.page.html',
   styleUrls: ['./shopping-arena.page.scss'],
 })
-
-
 export class ShoppingArenaPage implements OnInit {
 
-  items = [];
-  ref = firebase.database().ref('items/');
-  inputText:string='';
-  
+  itemRef: any;
+  libre:[];
+
+  public homePage : [];
+
+ // vm = this;
+
+ //vm.libres : [];
+
   public estaarena : any = [];
 
-  constructor(public estaarenaservice : EstaarenaService, public navCtrl: NavController) { 
-    this.ref.on('value', resp=>{
-      this.items = snapshotToArray(resp);
-    });
-  }
+  constructor(public estaarenaservice : EstaarenaService, private db: AngularFireDatabase) { }
 
-
-  ngOnInit() {
-    this.estaarenaservice.getEstapublic().subscribe(estaarena =>{
-      
-      this.estaarena = estaarena;
-      })
-  }
-
-  addItem(item) {
-    if(item!==undefined && item!==null){
-       let newItem = this.ref.push();
-       newItem.set(item);
-   }
-  }
-
-  myAction() {
   
-  }
+
+          ngOnInit() {
+            //para firestore
+            this.estaarenaservice.getEstapublic().subscribe(estaarena =>{
+            this.estaarena = estaarena;})
+
+            //para realtime database
+              this.itemRef = this.db.object('libre');
+                this.itemRef.snapshotChanges().subscribe(action=> {
+              
+                  this.homePage =  action.payload.val();
+
+                  console.log(action.payload.val());
+                  console.log(action);
+
+                  console.log("a",this.homePage);
+                
+                  this.homePage = Object.prototype.toString.call(action.payload.val)
+                })
+
+          }
+
+          myAction() {
+          
+          }
 
 }

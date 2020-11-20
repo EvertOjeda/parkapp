@@ -21,10 +21,15 @@ import { AngularFireDatabaseModule } from "@angular/fire/database";
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebase ),
-    AngularFireAuthModule, AngularFirestoreModule, ComponentesModule, AngularFireDatabaseModule],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule, 
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule, 
+    AngularFirestoreModule, 
+    ComponentesModule],
   providers: [
-  
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

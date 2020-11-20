@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ShoppingArenaPageRoutingModule } from './shopping-arena-routing.module';
+import { ResetPassPageRoutingModule } from './reset-pass-routing.module';
 
-import { ShoppingArenaPage } from './shopping-arena.page';
+import { ResetPassPage } from './reset-pass.page';
 import { ComponentesModule } from 'src/app/componentes/componentes.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentesModule } from 'src/app/componentes/componentes.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ShoppingArenaPageRoutingModule,
+    ResetPassPageRoutingModule,
     ComponentesModule
   ],
-  declarations: [ShoppingArenaPage]
+  declarations: [ResetPassPage]
 })
-export class ShoppingArenaPageModule {}
+export class ResetPassPageModule {}
