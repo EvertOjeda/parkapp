@@ -8,17 +8,6 @@
         </ion-card-header>
 
     </ion-card>
-            
-        <ion-item *ngFor = "">
-
-            <ion-label>
-                <h2> {{libre.value}} </h2>
-            </ion-label>
-
-        </ion-item>
-
-
-
 
         <!--Item para mostrar contenido firestore de arena-->
 
@@ -30,8 +19,8 @@
 
           <ion-label>
            <!--  <h2> <b> {{estaarena.name}} </b> </h2> -->
-             
-                <h2>{{estaarena.descripcion}}</h2>
+            <!--    <h2>{{estaarena.descripcion}}</h2>  -->
+                <h2> <b> Lugares disponibles: {{valuefinal}} </b> </h2>
           </ion-label>
 
           <ion-button color="dark" fill="clear" size="large" (click)="myAction()" href="https://goo.gl/maps/VVegdgifHDpeBtud7">
@@ -50,7 +39,7 @@
 
 
     <ion-card-content>
-        Centro comercial localizado en Ciudad del Este con mejores tiendas, 
+        Centro comercial localizado en Ciudad del Este con las mejores tiendas, 
         plaza de alimentación y entretenimientos. 
     </ion-card-content>
 
@@ -62,8 +51,8 @@
     <ion-card-content>
         Creado por Alumnos de Ingenieria de Sistemas - FPUNE.
 
-        {{homePage}}
     </ion-card-content>
+
     
     
 </ion-content>
